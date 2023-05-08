@@ -156,7 +156,7 @@ function App() {
             </Col>
             </Modal>
             <center>
-              <Col xs={24} style={{ padding: 10, textAlign: "center" }}>
+              <Col xs={24} style={{ padding: 10, marginTop: "30%", textAlign: "center" }}>
                 <b style={{ fontSize: 30 }} className="text-success bg-white">
                   Mango Leaf Disease <br />
                   Detection
@@ -176,6 +176,7 @@ function App() {
                   cover={
                     predicting === false &&
                     <Webcam
+                      hidden
                       audio={false}
                       height={"auto"}
                       width={"auto"}
@@ -184,6 +185,7 @@ function App() {
                     >
                       {({ getScreenshot }) => (
                         <Button
+                          hidden
                           style={{ marginTop: 20, width: "72%", }}
 
                           onClick={() => {
@@ -209,7 +211,7 @@ function App() {
                   {
                     predicting === false &&
                     <Col>
-                      <b style={{ color: "black" }}>OR </b><br /><br />
+                      <b style={{ color: "black" }} hidden>OR </b><br /><br />
                       <Upload
                         //fileList={selectedFileList}
                         customRequest={dummyRequest}
